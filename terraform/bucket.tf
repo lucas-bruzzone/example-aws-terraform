@@ -2,14 +2,11 @@
 # S3 BUCKET PARA TERRAFORM STATE
 # ==========================================
 resource "aws_s3_bucket" "terraform_state" {
-  bucket = "${var.project_name}-terraform-state-${random_id.bucket_suffix.hex}"
+  bucket = "${var.project_name}-terraform-state"
 
   tags = local.common_tags
 }
 
-resource "random_id" "bucket_suffix" {
-  byte_length = 4
-}
 
 resource "aws_s3_bucket_versioning" "terraform_state" {
   bucket = aws_s3_bucket.terraform_state.id
