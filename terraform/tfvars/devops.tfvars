@@ -1,0 +1,6 @@
+aws_region      = "us-east-1"
+environment     = "devops"
+project_name    = "example-aws-terraform"
+github_org      = "lucas-bruzzone"
+github_repo     = "*"
+admin_user_name = "terraform-admin"
